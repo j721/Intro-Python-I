@@ -47,3 +47,21 @@ elif len(sys.argv) ==3:
    #Renders calendar to month and year inputs that are specified
 else:
   print("Usage: 14_cal.py [month] [year]")
+
+
+#2nd Method that works
+
+# now = datetime.now()
+# month, year = now.month, now.year
+
+# cal = calendar.TextCalendar(firstweekday=6)
+
+# if len (sys.argv) ==1:
+#   cal.prmonth(year,month)
+# elif len(sys.argv) ==2:
+#   cal.prmonth(year, int(sys.argv[1]))
+# elif len(sys.argv) ==3:
+#   cal.prmonth(int(sys.argv[2]),int(sys.argv[1]))
+# else:
+#   print("usage: filename month year")
+#   sys.exit(1)
