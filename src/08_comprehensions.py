@@ -10,12 +10,19 @@ for more info regarding list comprehensions.
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
+# for i in range(1,6):
+#     y.append(i)
+
+
 y = [i for i in range (1,6)]
 
 print (y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
+
+# y = [i for i in range(10)]
+
 
 #cubes meaning to the 3rd power(exponential)
 
@@ -34,10 +41,14 @@ print(y)
 
 # Use a list comprehension to create a list containing only the _even_ elements
 # the user entered into list x.
+#the input function's output always comes through as strings
 
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
+#since the values from x are strings, we need to cast them to intergers
+#so that we can check if the number is even or odd
+#need to change num variable into interger. Transformed list of strings into a number
 y = [num for num in x if int(num) %2 == 0]
 
 print(y)

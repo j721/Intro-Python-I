@@ -7,6 +7,7 @@
 # YOUR CODE HERE
 
 def f1(n1,n2):
+#need a return statement. function will just return none
     return int(n1 + n2)
 
 print(f1(1, 2))
@@ -17,6 +18,7 @@ print(f1(1, 2))
 
 # YOUR CODE HERE
 
+#use * to pass in arbitrary number of arguments
 def f2(*args):
     return sum(args)
     
@@ -38,6 +40,7 @@ print(f2(*a))    # Should print 22. Added * in front of a to make it arbitrary n
 
 # YOUR CODE HERE
 
+#default arguments
 def f3( x, y=1):
     return x + y
 
@@ -55,9 +58,12 @@ print(f3(8))     # Should print 9
 
 # YOUR CODE HERE
 
-def f4 (**args):
-    for key, values in args.items():
-        print(f"key: {key} value: {values}")
+def f4 (**kwargs):
+    #keyword args come through as a dict
+    # for key, values in kwargs.items():
+        # print(f"key: {key} value: {values}")
+    for key in kwargs:
+        print(f"key: {key} value: {kwargs[key]}")
 
 # Should print
 # key: a, value: 12

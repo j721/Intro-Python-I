@@ -14,9 +14,10 @@ class LatLon:
 
 # YOUR CODE HERE
 
-
+#Waypoint(child class) inherit of Latlon passed in as parameter
 class Waypoint(LatLon):
     def __init__(self, lat, lon, name):
+        #user super() method to access methods from the parent class
         super().__init__(lat, lon)
         self.name = name
 
@@ -28,14 +29,26 @@ class Waypoint(LatLon):
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
 
 # YOUR CODE HERE
-class Geocache(LatLon):
+#1st method
+# class Geocache(LatLon):
+#     def __init__(self, name, difficulty, size, lat, lon):
+#          super().__init__(lat, lon)
+#          self.name = name
+#          self.difficulty = difficulty
+#          self.size = size
+#     def __str__(self):
+#         return f'"{self.name}", {self.difficulty}, {self.size}, {self.lat}, {self.lon}'
+
+
+class Geocache(Waypoint):
     def __init__(self, name, difficulty, size, lat, lon):
-         super().__init__(lat, lon)
-         self.name = name
+         super().__init__(lat, lon, name)
          self.difficulty = difficulty
          self.size = size
+         #The __str__method allows us to define how we want the class to be printed out
     def __str__(self):
-        return f'"{self.name}", {self.difficulty}, {self.size}, {self.lat}, {self.lon}'
+        #this method returns a string that can then be printed
+        return f'"{self.name}", difficulty:{self.difficulty}, size:{self.size}, {self.lat}, {self.lon}'
 
 
 # Make a new waypoint and print it out: "Catacombs", 41.70505, -121.51521

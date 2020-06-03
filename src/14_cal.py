@@ -65,3 +65,40 @@ else:
 # else:
 #   print("usage: filename month year")
 #   sys.exit(1)
+
+#3rd method
+
+#receive user input as argument input (not going to user input function)
+#sys.argv is a list of args that the user provides at the start of the program
+# num_args = len(sys.argv)
+
+# #init an instance of the text calendar class
+# cal = calendar.TextCalendar()
+
+# month = datetime.now().month
+# year = datetime.now().year
+
+# #if user specified no args:
+# if num_args == 1:  #length of 1, always get name of the program (i.e. the file 14_cal.py)
+#   #print current month and year 
+#   pass
+#   #we want to print out the month with the calendar
+
+# #if user specified one args:
+# elif num_args ==2:
+#   #assume that args is the month
+#   month =int(sys.argv[1])
+#   #print that month of the current year
+
+# #if user specified two args:
+# elif num_args ==3:
+#   #print that month of that year
+#   month = int(sys.argv[1])
+#   year = int(sys.argv[2])
+# #otherwise
+# else
+# #print a usage statement
+#   print("usage: cal.py [month] [year]")
+#   sys.exit(1) # provides exit status
+
+# cal.prmonth(year,month)
